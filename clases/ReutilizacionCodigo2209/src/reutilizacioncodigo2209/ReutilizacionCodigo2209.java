@@ -10,6 +10,9 @@ import ico.fes.componentes.Mouse;
 import ico.fes.componentes.Procesador;
 import ico.fes.componentes.Teclado;
 import ico.fes.herencia.Alumno;
+import ico.fes.herencia.Servidor;
+import ico.fes.herencia.poliformismo.Animal;
+import ico.fes.herencia.poliformismo.Perro;
 import javax.swing.JFrame;
 
 /**
@@ -66,6 +69,34 @@ public class ReutilizacionCodigo2209 {
         
         Alumno alu2 = new Alumno("3242342", "ICO", "Jose Perez", 19);
         System.out.println(alu2);
+        
+        alu1.setNumeroCuenta("46654185");
+        alu1.setEdad(19);
+        System.out.println(alu1);
+        
+        System.out.println("______________ composicion y herencia en la misma clase _______________________________");
+        Servidor server = new Servidor();
+        System.out.println(server);
+        server.setNumeroTarjetasRed(2);
+        System.out.println(server);
+        server.setMarca("HP");
+        System.out.println(server);
+        server.setRaton(new Mouse("LG", "óptico"));
+        System.out.println(server);
+        server.getRaton().setMarca("Logitech");
+        System.out.println(server);
+        
+        
+        System.out.println("______________________Ejemplo poliformismo___________________________");
+        Perro dog = new Perro("Bull dog", "5 estrellas", 4);
+        Animal animal1 = new Animal(4);
+        dog.emitirSonido();
+        animal1.emitirSonido();
+
+        //dog.emitirSonido();
+        //((Animal)dog).emitirSonido();
+        //Animal animal = (Animal)dog;
+        //System.out.println(animal.getClass());
     }
     
 }
