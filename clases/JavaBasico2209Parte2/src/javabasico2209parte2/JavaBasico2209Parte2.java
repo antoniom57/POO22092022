@@ -5,6 +5,9 @@
 package javabasico2209parte2;
 
 import ico.fes.Aritmetica;
+import ico.fes.Circulo;
+import ico.fes.Cuadrado;
+import ico.fes.herencia.EstudianteDeportistaArtista;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -78,6 +81,26 @@ public class JavaBasico2209Parte2 {
         
         //nunca permitir que un prgrama termine de forma abruptua por un error
         
+        System.out.println(".......................Hasta aquí.................");
+        
+        Cuadrado cuad = new Cuadrado(5.0f);
+        Circulo circ = new Circulo(4.5f);
+        
+        System.out.println("Area del cuadrado es: " + cuad.calcularArea());
+        System.out.println("Area del circulo es: " + circ.calcularArea());
+        
+
+        System.out.println("---------------------------------------");
+
+        EstudianteDeportistaArtista eda = new EstudianteDeportistaArtista();
+        eda.setNombre("Diana");
+        eda.setCarrera("ICO");
+        eda.setDisciplinaDportiva("Futbol");
+        eda.setGeneroArtistico("Fotografia, Estampa, Dibujo");
+        eda.comer();
+        eda.ensayar();
+        eda.entrenar();
+        System.out.println(eda);
     }
     
 }
